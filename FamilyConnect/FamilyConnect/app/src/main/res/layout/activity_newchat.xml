@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.newchat">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="FAMILY CHAT" />
+</RelativeLayout>
+<RelativeLayout
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatrec"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addchat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <EditText
+        android:id="@+id/addchat"
+        android:layout_width="300dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/addnewchat"
+        android:layout_toStartOf="@+id/addnewchat"
+        android:ems="10"
+        android:hint="Message"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/addnewchat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_alignBaseline="@+id/addchat"
+        android:layout_alignBottom="@+id/addchat"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/sendbutton"
+        android:onClick="chatmessage"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+</RelativeLayout>

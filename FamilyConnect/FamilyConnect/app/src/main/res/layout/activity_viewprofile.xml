@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.viewprofile">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/proimage"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/border" />
+    <TextView
+        android:id="@+id/textView3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#311B92"
+        android:text="Recent posts" />
+
+            <TextView
+                android:id="@+id/textView445"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/scrrrol"
+         android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:onClick="allposts"
+                android:text="View all post"
+                android:textColor="#311B92" />
+
+
+    <HorizontalScrollView
+android:id="@+id/scrrrol"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView3" >
+
+        <RelativeLayout
+            android:id="@+id/coupons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/adduser"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/adduser"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/display1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="ntng"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/search" />
+
+            <ImageView
+                android:id="@+id/display2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignTop="@+id/display1"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_toEndOf="@+id/display1"
+                android:layout_toRightOf="@+id/display1"
+                android:onClick="ntng"
+                app:srcCompat="@drawable/search" />
+
+            <ImageView
+                android:id="@+id/display3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="160dp"
+                android:layout_alignLeft="@+id/display2"
+                android:onClick="ntng"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/search" />
+
+            <ImageView
+                android:id="@+id/display4"
+                android:onClick="allposts"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="160dp"
+                android:layout_alignLeft="@+id/display3"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+
+                app:srcCompat="@drawable/addnew" />
+
+            <TextView
+                android:id="@+id/display5"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="420dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="94dp"
+                android:text="View All"
+                android:visibility="gone"
+                android:textColor="#000000" />
+
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="600dp">
+
+                <TextView
+                    android:id="@+id/baa1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Height"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/proheight"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="660dp">
+
+                <TextView
+                    android:id="@+id/baa2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Weight"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/proweight"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="720dp">
+
+                <TextView
+                    android:id="@+id/baa3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Birth Time"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/protime"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="840dp">
+
+                <TextView
+                    android:id="@+id/baa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Religion"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/proreligion"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--" />
+            </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relativeLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="900dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                  >
+
+                    <TextView
+                        android:id="@+id/blood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Blood Group"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="17dp" />
+
+
+                    <TextView
+                        android:id="@+id/probloodgroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="15dp"
+                        android:text="--"
+
+                        android:textSize="20dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="960dp">
+
+                <TextView
+                    android:id="@+id/baad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Profession"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+                <TextView
+                    android:id="@+id/proprofession"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="--" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="780dp">
+
+                <TextView
+                    android:id="@+id/baadsss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Gender"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+
+                <TextView
+                    android:id="@+id/progender"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayoqau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="1020dp">
+
+                <TextView
+                    android:id="@+id/baadssss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Caste"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+
+                <TextView
+                    android:id="@+id/procaste"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="--" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayoqawu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="1080dp">
+
+                <TextView
+                    android:id="@+id/baadsssssq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Raasi"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+
+                <TextView
+                    android:id="@+id/proraasi"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="--" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLaysoqawu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginTop="1160dp">
+
+                <TextView
+                    android:id="@+id/baadssssssq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Star"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17dp" />
+
+
+
+                <TextView
+                    android:id="@+id/prostar"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="--" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#000000"
+        android:alpha="0.65"
+        android:layout_marginTop="290dp"
+        android:layout_height="70dp"
+        android:id="@+id/relativeLayout3">
+
+        <TextView
+            android:id="@+id/promartialstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/proname"
+            android:layout_alignBottom="@+id/proname"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_toLeftOf="@+id/proage"
+            android:layout_toStartOf="@+id/proage"
+            android:text="Martial Status"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/proname"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:editable="false"
+            android:text="Name"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/proage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:editable="false"
+            android:text="Age"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/adduser"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="180dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="shareintentparent"
+        android:layout_marginTop="1220dp"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/adduser1"
+        android:onClick="shareintentchild"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1220dp"
+        android:layout_marginLeft="250dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/adduser2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1220dp"
+        android:layout_marginLeft="100dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="shareintentsiblings"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/adduser3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1220dp"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="shareintentparent"
+        app:srcCompat="@drawable/add" />
+
+            <TextView
+                android:id="@+id/textsiblings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/textView3"
+                android:layout_toRightOf="@+id/textView3"
+                android:text="SIBLINGS"
+                android:layout_marginTop="1270dp"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/textchild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1270dp"
+                android:visibility="gone"
+                android:text="CHILD"
+                android:layout_marginLeft="260dp"
+android:layout_marginBottom="10dp"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/textmother"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="182dp"
+                android:layout_marginTop="1270dp"
+                android:layout_marginBottom="10dp"
+                android:text="MOTHER"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/textfather"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout6"
+                android:layout_alignStart="@+id/relativeLayout6"
+android:layout_marginLeft="10dp"
+                android:layout_marginTop="1270dp"
+                android:layout_marginBottom="10dp"
+                android:text="FATHER"
+                android:textSize="10dp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

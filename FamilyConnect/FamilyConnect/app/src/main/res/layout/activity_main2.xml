@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.Main2Activity">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="TextView"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="73dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="hi"
+                android:id="@+id/cscs"
+                android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="48dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/postrecycler"
+                android:layout_width="368dp"
+                android:layout_height="312dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+
+        android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/toolbar_subtitle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:paddingLeft="10dp"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/profileimagee45"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:layout_alignBottom="@+id/toolbar_subtitle"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/chaaats"
+                android:visibility="gone"
+                android:clickable="true"
+                android:onClick="hi"
+                android:padding="12dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/abc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:stretchColumns="1">
+                <TextView
+                    android:id="@+id/editemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="145dp"
+                    android:layout_alignTop="@+id/profileimage"
+                    android:textAlignment="center" />
+
+
+
+                <ImageView
+                    android:id="@+id/profileimage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+
+                    android:adjustViewBounds="false"
+                    android:clickable="false"
+                    android:cropToPadding="false"
+                    app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+                <TextView
+                    android:id="@+id/textView1233"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Name *"
+                    android:textStyle="bold"
+                    android:textColor="#484848"
+                    android:textSize="17dp"
+                    android:textAlignment="center"
+
+                     />
+                <TextView
+                    android:id="@+id/textView12334"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="95dp"
+                    android:text="DOB *"
+                    android:textStyle="bold"
+                    android:textColor="#484848"
+                    android:textSize="17dp"
+                    android:textAlignment="center"
+                 />
+                <EditText
+                    android:id="@+id/editname"
+                    android:layout_width="262dp"
+                    android:layout_height="50dp"
+android:textSize="17dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="30dp"
+                    android:hint=" Enter Name"
+                    android:inputType="textPersonName"
+
+                    />
+
+                <TextView
+                    android:id="@+id/editdob"
+                    android:layout_width="252dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="88dp"
+                    android:hint="Select DOB"
+                    android:inputType="date"
+                    android:textSize="17dp"
+                    android:onClick="selectdate"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="10dp"
+
+
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/qwerty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="183dp"
+                    android:text="Father Name"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="#484848"
+                    android:textSize="17dp"
+                     />
+
+                <TextView
+                    android:id="@+id/father"
+                    android:layout_width="262dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="170dp"
+                    android:ems="10"
+                    android:hint="Select Father name"
+                    android:inputType="textPersonName"
+                    android:onClick="fatheernamee"
+                    android:padding="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.338" />
+
+                <TextView
+                    android:id="@+id/mother"
+                    android:hint="Select Mother Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="230dp"
+
+                    android:onClick="motheernamee"
+                    android:padding="15dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textView123"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="240dp"
+                    android:text="Mother Name "
+                    android:textStyle="bold"
+                    android:textColor="#484848"
+                    android:textSize="17dp"
+
+                    android:textAlignment="center"
+                     />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/abcdef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/children"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Children"
+                            android:textSize="25dp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/adddd"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginRight="12dp"
+                            android:clickable="false"
+                            android:onClick="addchild"
+                            app:srcCompat="@drawable/addpost" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="515dp"
+                    android:text="Gender" />
+
+                <RelativeLayout
+                    android:id="@+id/yoyo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <EditText
+                        android:id="@+id/heightt"
+                        android:layout_width="262dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="270dp"
+                        android:ems="10"
+                        android:hint="Set Height (CM)"
+                        android:inputType="number"
+                        android:padding="15dp"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/setheight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="290dp"
+                        android:text="Height *"
+                        android:textAlignment="center"
+                        android:textColor="#484848"
+                        android:textSize="17dp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/weightt"
+                        android:layout_width="262dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="330dp"
+                        android:hint="Set Weight (KG)"
+                        android:inputType="number"
+                        android:padding="15dp"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/setweight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/setheight"
+                        android:layout_alignStart="@+id/setheight"
+                        android:layout_alignTop="@+id/weightt"
+                        android:text="Weight *"
+
+                        android:textAlignment="center"
+                        android:textColor="#484848"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <RadioGroup
+                        android:id="@+id/genderradio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="440dp">
+
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/martial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="515dp"
+                        android:text="Martial Status" />
+
+                    <RadioGroup
+                        android:id="@+id/martialradio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="155dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="440dp">
+
+                        <RadioButton
+                            android:id="@+id/single"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Single" />
+
+                        <RadioButton
+                            android:id="@+id/married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Married" />
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="500dp">
+
+                        <TextView
+                            android:id="@+id/blood"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Blood Group"
+                            android:textAlignment="center"
+                            android:textColor="#484848"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/bloodspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="150dp"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#484848"
+                            app:ms_arrowSize="8dp"
+                            app:ms_baseColor="#484848"
+                            app:ms_enableErrorLabel="false"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_errorColor="#484848"
+                            app:ms_floatingLabelColor="#484848"
+                            app:ms_highlightColor="#484848"
+                            app:ms_multiline="false"
+                            app:ms_thickness="0.3dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout5"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/religion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Religion"
+                            android:textColor="#484848"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/religionspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="150dp"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#484848"
+                            app:ms_arrowSize="9dp"
+                            app:ms_baseColor="#484848"
+                            app:ms_enableErrorLabel="false"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_errorColor="#484848"
+                            app:ms_floatingLabelColor="@color/colorPrimary"
+                            app:ms_highlightColor="#484848"
+                            app:ms_multiline="false"
+                            app:ms_thickness="0.3dp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout6"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/caste"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Caste"
+                            android:textColor="#484848"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/castespinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="150dp"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#484848"
+                            app:ms_arrowSize="9dp"
+                            app:ms_baseColor="#484848"
+                            app:ms_enableErrorLabel="false"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_errorColor="#484848"
+                            app:ms_floatingLabelColor="@color/colorPrimary"
+                            app:ms_highlightColor="#484848"
+                            app:ms_multiline="false"
+                            app:ms_thickness="0.3dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout7"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/raasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Raasi"
+                            android:textColor="#484848"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/raasispinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="150dp"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#484848"
+                            app:ms_arrowSize="9dp"
+                            app:ms_baseColor="#484848"
+                            app:ms_enableErrorLabel="false"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_errorColor="#484848"
+                            app:ms_floatingLabelColor="@color/colorPrimary"
+                            app:ms_highlightColor="#484848"
+                            app:ms_multiline="false"
+                            app:ms_thickness="0.3dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout8"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Star"
+                            android:textColor="#484848"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/starspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="150dp"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#484848"
+                            app:ms_arrowSize="9dp"
+                            app:ms_baseColor="#484848"
+                            app:ms_enableErrorLabel="false"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_errorColor="#484848"
+                            app:ms_floatingLabelColor="#484848"
+                            app:ms_highlightColor="#484848"
+                            app:ms_multiline="false"
+                            app:ms_thickness="0.3dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout9"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout10"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/profession"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Profession"
+                            android:textColor="#484848"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/professionspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="150dp"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#484848"
+                            app:ms_arrowSize="9dp"
+                            app:ms_baseColor="#484848"
+                            app:ms_enableErrorLabel="false"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_errorColor="#484848"
+                            app:ms_floatingLabelColor="#484848"
+                            app:ms_highlightColor="#484848"
+                            app:ms_multiline="false"
+                            app:ms_thickness="0.3dp" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/editprofile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayout11"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:onClick="edit"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Save Profile"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vieewpost"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:onClick="logout"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Log Out"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/vieewpost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:onClick="viewalllpost"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="VIEW MY POST"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/editdob"
+                    android:layout_alignLeft="@+id/profileimage"
+                    android:layout_alignStart="@+id/profileimage"
+                    android:onClick="proimg"
+                    android:text="Change Pic"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark" />
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+        <ProgressBar
+        android:id="@+id/empty_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+
+        <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/webview"
+android:visibility="gone"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/bottomrelative"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_height="48dp">
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="40dp"
+        android:background="#BDBDBD"
+       android:layout_alignParentBottom="true"
+        ></View>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+android:layout_alignParentBottom="true"
+        android:theme="@style/AppTheme"
+android:background="#ffffff"
+android:paddingBottom="0dp"
+        app:menu="@menu/navigation"></android.support.design.widget.BottomNavigationView>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bottomrelativse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="48dp">
+    <TextView
+        android:id="@+id/ssed"
+        android:visibility="gone"
+android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:textColor="#D50000"
+        android:text="Please Fill the details to continue."
+        />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

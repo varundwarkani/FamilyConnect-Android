@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Team Organizational Chart</title>
+    <link href="//cdn.syncfusion.com/15.4.0.17/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="//cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+    <script src="//cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
+    <script src="//cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
+    <script src="//cdn.syncfusion.com/15.4.0.17/js/web/ej.web.all.min.js "></script>
+    <script src="//www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+     <script type="text/javascript">
+
+     	  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+     	var famuid = getUrlParameter('famuid');
+     
+ 
+
+
+ 
+      function abc() {
+        
+      }
+
+        function showToast(){
+        
+            var message = getUrlParameter('famuid');
+         
+
+            /* 
+                Call the 'makeToast' method in the Java code. 
+                'app' is specified in MainActivity.java when 
+                adding the JavaScript interface. 
+             */
+            app.makeToast(getUrlParameter('famuid'));
+            return false;
+        }
+         /* 
+            Call the 'showToast' method when the form gets 
+            submitted (by pressing button or return key on keyboard). 
+         */
+      
+    </script>
+
+<style>
+        #content {
+            width: 160px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            text-align: left;
+            vertical-align: bottom;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+<body >
+	<div id="mainpage">
+  <script src="//www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+<script src="//www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+<script src="//www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
+<script src="//www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+<script src="//www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+<script src="//www.gstatic.com/firebasejs/4.8.1/firebase-storage.js"></script>   
+<script src="//borismoore.github.io/jsrender/jsrender.min.js"></script>
+
+
+<script id="htmlTemplate" type="text/x-jsrender">
+  <div >
+    <input type="image" style="height:100px;width:100px;margin-left:0px" src="{{:ImageUrl}}"/>
+        <div style="background-color: #ffffff;padding-top: 0px;height: 25px;text-align: center;padding-right: 5px;text-decoration-color: #ffffff;color: #000000;font-weight: bold;" id="abc">{{:name}}</div>
+  </div>
+</script>
+
+
+    
+  <script>
+  var config = {
+    apiKey: "AIzaSyAVJAkFaWbMqOckJelfN4jiEfaAv5oeiTM",
+    authDomain: "family-connect-2087f.firebaseapp.com",
+    databaseURL: "https://family-connect-2087f.firebaseio.com",
+    projectId: "family-connect-2087f",
+    storageBucket: "family-connect-2087f.appspot.com",
+    messagingSenderId: "822066786079"
+  };
+  firebase.initializeApp(config);
+</script>
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div id="diagram"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+      
+   $.getJSON("https://family-connect-2087f.firebaseio.com/"+famuid+"/family.json", function(result){
+   
+ var names=[];    
+
+
+   var ret = Object.keys(result).map(function(a,i){ return[i,result] })
+
+var childs=ret[0][1];
+var myJSON = JSON.stringify(childs);
+var ss=Object.keys(childs)[0];
+
+ 
+ 
+var i=0;
+var len=ret.length;
+
+for(i=0;i<len;i++)
+{
+  var id = Object.keys(childs)[i];
+  var name = Object.values(childs)[i].name;
+ var ImageUrl = Object.values(childs)[i].pic;
+   var childcollection=Object.values(childs)[i].child;
+   var parent=Object.values(childs)[i].parent;
+
+
+ var father='';
+ var mother='';
+if(parent)
+{
+   var father=parent[1];
+   var mother=parent[2];
+} 
+
+var k=1; 
+//var childlen=childcollection.length;
+var data={};
+
+  var a = '#C34444';
+           
+data.name= name;
+  data.id = id;  
+  data.ImageUrl = ImageUrl;
+  data.RatingColor = a;
+
+//data.root=false;
+//data.father=father;
+//data.mother=mother;
+
+//for(k=1;k<childlen;k++)
+//{
+
+//var data={};
+//data.name= childcollection[k];
+//data.father=name;
+//data.mother=father;
+
+if(!father && !mother)
+{
+//data.root=true;
+ 
+}
+else
+{
+  data.parents= JSON.parse('["'+father+'","'+mother+'"]')  ;
+}
+names.push(data); 
+//} 
+
+ 
+//});
+}
+     
+     
+   //  var data1=[{"name":"HlTaUGyAocgpS5dlSaQNeRzGlKz2"},{"name":"KQiGdBljnxexH1mbGRuixXvUBdX2","parents":"HlTaUGyAocgpS5dlSaQNeRzGlKz2"},{"name":"abc","parents":"HlTaUGyAocgpS5dlSaQNeRzGlKz2"},{"name":"va","parents":["abc","KQiGdBljnxexH1mbGRuixXvUBdX2"]}]
+     console.log(names);
+             
+        //creating the node template
+        function nodeTemplate(diagram, node) {
+            //node.source = node.ImageUrl;
+            //node.labels[0].text = node.name;
+            //node.labels[1].text = "Relation";
+        }
+
+        function getLayoutInfo(diagram, node, options) {
+            if (!options.hasSubTree) {
+                options.type = "right";
+            }
+
+        }
+
+    
+        if (!(ej.browserInfo().name === "msie" && Number(ej.browserInfo().version) < 9)) {
+            $("#diagram").ejDiagram({
+                width: "100%", height: "700px",
+                //use automatic layout to arranging elements on the page
+                layout: {
+                    type: "organizationalchart", marginX: 0, marginY: 50, horizontalSpacing: 30, verticalSpacing: 30,
+                    getLayoutInfo: getLayoutInfo,
+                },
+                defaultSettings: {
+                    //set the default properties of the nodes.
+                  node: {width: 100, height: 125,
+                          borderColor: "white",
+                         borderWidth:3,
+                             templateId: "htmlTemplate",
+             type: ej.datavisualization.Diagram.Shapes.Html,
+                        labels: [
+                            {
+                                name: "label1", horizontalAlignment: "left", verticalAlignment: "top",
+                              margin: {  left: -17, top: -17 }, fontSize: 11, bold: true, fontFamily: "Segoe UI"
+                            },
+                            {
+                                name: "label2", horizontalAlignment: "left", verticalAlignment: "top",
+                                margin: { left: -17, top: -7 }, fontSize: 10, fontFamily: "Segoe UI"
+                            }
+                        ]
+                    },
+                    //set the default properties of the connectors.
+                    connector: { segments: [{ "type": "orthogonal" }], targetDecorator: { shape: "none" } }
+                },
+                //initialize the node template.
+                nodeTemplate: nodeTemplate,
+                pageSettings: { scrollLimit: "diagram" },
+                tool: ej.datavisualization.Diagram.Tool.ZoomPan,
+                snapSettings: { snapConstraints: ej.datavisualization.Diagram.SnapConstraints.None },
+                enableContextMenu: false,
+
+click:function(args){ 
+
+	
+             
+                    app.makeToast(args.actualObject.id);
+             }, 
+
+
+                //configure data source for diagram
+                dataSourceSettings: {
+                  
+                    id: "id", parent: "parents",
+                    //specifies the dataSource
+                    dataSource: names 
+                  
+                }
+            });
+        }
+        else {
+            alert("Diagram will not be supported in IE Version < 9");
+        }
+ 
+    });
+     
+     
+       
+    </script>
+    </div>
+</body>
+
+<script type="text/javascript">
+  $("#mainpage").hide();
+ $("#myModalloadingpage").show();
+     window.onload = function(){
+  $("#myModalloadingpage").hide();
+  $("#mainpage").show();
+}
+
+
+
+
+
+</script>
+<div id="myModalloadingpage" style="width: 100%;height: 400px;vertical-align: middle;margin-top: 250px;" class="col-xs-12"    >
+<div style="" class="hidden-sm hidden-xs col-md-12" > 
+
+       
+    <div style="text-align: center;margin-top: 10px;font-size: 25px;">
+please Wait, Building your Network...
+ </div>
+    </div>
+    
+</div> 
+
+
+
+
+</html>

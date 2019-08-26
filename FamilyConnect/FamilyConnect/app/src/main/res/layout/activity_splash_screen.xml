@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/overlay"
+    android:layout_marginBottom="-60dp"
+    tools:context="com.cartoonswikipedia.www.familyconnect.SplashScreen">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+
+        android:background="@drawable/iconn"
+        />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Family Circle"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff"
+        android:text="Developed with Love by Dwarsoft"
+        android:textSize="16dp" />
+
+</RelativeLayout>

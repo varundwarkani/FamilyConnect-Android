@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.Main2Activity">
+
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/toolbar_subtitle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:paddingLeft="10dp"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/profileimagee45"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:onClick="hi"
+                android:padding="12dp"
+                app:srcCompat="@drawable/newchat" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/postrecycler"
+            android:layout_width="368dp"
+            android:layout_height="312dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TextView
+                android:id="@+id/editemail"
+                android:layout_width="262dp"
+                android:layout_height="37dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.113" />
+
+            <ImageView
+                android:id="@+id/profileimage"
+                android:layout_width="87dp"
+                android:layout_height="88dp"
+                android:adjustViewBounds="false"
+                android:clickable="false"
+                android:cropToPadding="false"
+                android:onClick="proimg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.167"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+            <EditText
+                android:id="@+id/editname"
+                android:layout_width="262dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.338" />
+
+
+            <EditText
+                android:id="@+id/editdob"
+                android:layout_width="260dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="DOB: dd/mm/yyyy"
+                android:inputType="date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+
+            <EditText
+                android:id="@+id/editgender"
+                android:layout_width="256dp"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:hint="Gender: Male|Female"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+            <Button
+                android:id="@+id/editprofile"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:onClick="edit"
+                android:background="#000000"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="Save Profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.141"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.872" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editgender"
+                android:layout_alignBottom="@+id/editgender"
+                android:layout_alignEnd="@+id/empty_progress_bar"
+                android:layout_alignRight="@+id/empty_progress_bar"
+                android:background="#000000"
+                android:onClick="logout"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Log Out"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.858"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.872" />
+
+
+        </TableLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/empty_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:theme="@style/AppTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

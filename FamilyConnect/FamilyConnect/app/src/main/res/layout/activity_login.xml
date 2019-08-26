@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.cartoonswikipedia.www.familyconnect.login">
+
+    <ProgressBar
+        android:id="@+id/empty_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
+
+
+    <EditText
+            android:id="@+id/email"
+android:textColorHighlight="#757575"
+            android:textColorHint="#757575"
+            android:shadowColor="#DCDCDC"
+
+            android:textColor="#757575"
+
+            android:layout_width="match_parent"
+            android:hint="Email ID"
+            android:layout_height="47dp"
+android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+android:backgroundTint="#757575"
+
+            android:layout_marginTop="100dp"
+            android:inputType="textEmailAddress" />
+
+
+
+
+        <EditText
+            android:id="@+id/pass"
+android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+android:textColorHighlight="#757575"
+            android:textColorHint="#757575"
+            android:shadowColor="#DCDCDC"
+android:hint="Password"
+            android:textColor="#757575"
+            android:textColorLink="#616161"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:backgroundTint="#757575"
+            android:layout_marginTop="190dp"
+            android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+
+        android:background="#8BC34A"
+        android:onClick="logged"
+
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="284dp"
+
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textStyle="bold"
+   />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/button2"
+        android:background="#8BC34A"
+        android:onClick="reset"
+        android:text="RESET"
+
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textStyle="bold"
+         />
+
+
+</RelativeLayout>

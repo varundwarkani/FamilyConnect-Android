@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/overlay"
+    android:layout_marginBottom="-70dp"
+    android:layout_marginTop="-20dp"
+    tools:context="com.cartoonswikipedia.www.familyconnect.verify">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:text="Congrats ! Your family circle app has been created . Please wait for the family circle admin to approve the application ."
+        android:textSize="20dp"
+        android:layout_marginTop="270dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+         />
+
+    <Button
+        android:id="@+id/notverified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:onClick="notverifiedsignout"
+        android:text="SIGN OUT"
+
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="502dp" />
+</RelativeLayout>

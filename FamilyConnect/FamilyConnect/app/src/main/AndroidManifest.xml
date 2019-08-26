@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cartoonswikipedia.www.familyconnect">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/iconn"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/iconn"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity android:name=".login" />
+        <activity android:name=".signup">
+            <intent-filter>
+                <data android:scheme="my.special.scheme" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".profile"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".editprofile" />
+        <activity android:name=".display" />
+        <activity android:name=".recycler" />
+        <activity android:name=".request" />
+        <activity android:name=".post" />
+        <activity
+            android:name=".Search"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".comment" />
+        <activity android:name=".likeslist" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2" />
+        <activity
+            android:name=".viewprofile"
+            android:label="@string/title_activity_viewprofile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".chat" />
+        <activity android:name=".chatapp" />
+        <activity android:name=".textviews" />
+        <activity android:name=".newchat">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="activity_b" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".network" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".verify" />
+        <activity android:name=".allposts" />
+        <activity android:name=".selectfathername" />
+        <activity android:name=".Selectmothername" />
+        <activity android:name=".ReferralStatus" />
+        <activity android:name=".upgradepro"></activity>
+
+    </application>
+
+</manifest>

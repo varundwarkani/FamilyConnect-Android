@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.chat">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatrecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guideline"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/guideline"
+        android:layout_toRightOf="@+id/guideline" />
+
+    <EditText
+        android:id="@+id/addmessage"
+        android:layout_width="322dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:hint="Message"
+        android:inputType="textMultiLine"
+        android:layout_alignParentBottom="true"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+         />
+
+    <Button
+        android:id="@+id/postmessage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/addmessage"
+        android:layout_toRightOf="@+id/addmessage"
+        android:background="@drawable/sendbutton"
+        android:onClick="sendmessage"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="35dp" />
+
+
+</RelativeLayout>

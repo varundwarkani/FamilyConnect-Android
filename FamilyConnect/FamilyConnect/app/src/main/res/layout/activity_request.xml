@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.request"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <EditText
+            android:id="@+id/requestfamilyname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#757575"
+            android:layout_alignParentTop="true"
+     android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="124dp"
+
+            android:hint="Family Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/requestmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_below="@+id/requestfamilyname"
+            android:layout_marginTop="39dp"
+            android:backgroundTint="#757575"
+
+
+            android:hint="Email ID"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/requestpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_below="@+id/requestmail"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Password"
+            android:backgroundTint="#757575"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/requestfam"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/requestpassword"
+            android:layout_marginTop="60dp"
+android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:background="#8BC34A"
+            android:text="REGISTER"
+
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

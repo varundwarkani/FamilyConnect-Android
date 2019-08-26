@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.ReferralStatus">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#F0F0F0"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/relativeLayout4">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:text="Referral" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ssasasa"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView19"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/referral" />
+        <TextView
+            android:id="@+id/countvall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 / 10"
+            android:layout_below="@+id/textView19"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp"/>
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="Your referral status" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/ssasasa"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:text="Skip referral process!"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView201"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/textView20"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="Buy pro account"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:onClick="upgradee"
+            android:layout_below="@+id/textView201"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
+            android:background="#7CB342"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Upgrade to pro" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

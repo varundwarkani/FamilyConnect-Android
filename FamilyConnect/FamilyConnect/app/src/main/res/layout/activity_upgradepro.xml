@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartoonswikipedia.www.familyconnect.upgradepro">
+    <RelativeLayout
+        android:id="@+id/paydesc"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimaryDark"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:textStyle="bold"
+
+            android:text="How to Upgrade?" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="31dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:text="Login to your paytm account and pay Rs.50 to mobile number 9094192062.Once payment is done, mention your mobile number and paytm transcation number in the form below and click on submit. You will get the pro feature within 24 hours." />
+    </RelativeLayout>
+<RelativeLayout
+    android:id="@+id/payrelative"
+    android:layout_marginTop="220dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_passworded"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_centerHorizontal="true"
+    >
+
+
+
+        <EditText
+            android:id="@+id/payname"
+            android:text=""
+            android:hint="Name *"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_passwordeds"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+android:layout_marginTop="70dp"
+
+        android:layout_centerHorizontal="true"
+        >
+
+
+
+        <EditText
+            android:id="@+id/payphone"
+            android:inputType="number"
+            android:hint="Mobile Number *"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_passworssded"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+
+android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        >
+
+
+
+        <EditText
+            android:id="@+id/paytranscation"
+            android:text=""
+android:textAlignment="center"
+
+            android:hint="Paytm Transcation Number *"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/paybutton"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:onClick="upgradepro"
+        android:layout_below="@+id/textView201"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:textColor="#ffffff"
+        android:background="#7CB342"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="Submit my details" />
+
+</RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/paydesc"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/paystatus"
+        android:textSize="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+</RelativeLayout>
